@@ -163,3 +163,23 @@ filterBtns.forEach(btn => {
   });
 });
 
+  // Expand image modal functionality
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("expandedImg");
+  const closeBtn = document.querySelector(".close");
+
+  document.querySelectorAll(".expand-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const imgSrc = btn.closest(".project-card").querySelector(".project-img").src;
+      modal.style.display = "block";
+      modalImg.src = imgSrc;
+    });
+  });
+
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  };
