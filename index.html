@@ -31,6 +31,7 @@
       <li class="w-full xl:w-auto text-center px-[15px] py-[15px] hover:bg-gray-50 xl:hover:bg-transparent"><a href="#Contact">Contact</a></li>
     </ul>
 
+    
 
     <!-- Social Icons -->
     <div class="hidden xl:flex items-center space-x-4 text-[#6B7280] text-lg">
@@ -467,13 +468,15 @@
       <!-- UI/UX Project 1 -->
       <div class="project-card rounded-xl overflow-hidden shadow-lg" data-category="uiux">
         <img src="https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=400&h=300&fit=crop" alt="UI/UX Project"
-          class="w-full h-64 object-cover" />
+          class="w-full h-64 object-cover project-img" />
         <div class="project-content">
           <span class="project-category">UI/UX DESIGN</span>
           <h3 class="project-title">Smart Home Interface</h3>
           <div class="project-icons">
-            <button><i class="fas fa-expand"></i></button>
-            <button><i class="fas fa-external-link-alt"></i></button>
+            <button class="expand-btn"><i class="fas fa-expand"></i></button>
+            <a href="https://github.com/YourUsername/YourRepo" target="_blank" class="project-link">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -481,13 +484,15 @@
       <!-- Development Project 1 -->
       <div class="project-card rounded-xl overflow-hidden shadow-lg" data-category="development">
         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop" alt="Development Project"
-          class="w-full h-64 object-cover" />
+          class="w-full h-64 object-cover project-img" />
         <div class="project-content">
           <span class="project-category">DEVELOPMENT</span>
           <h3 class="project-title">Notes App</h3>
           <div class="project-icons">
-            <button><i class="fas fa-expand"></i></button>
-            <button><i class="fas fa-external-link-alt"></i></button>
+            <button class="expand-btn"><i class="fas fa-expand"></i></button>
+            <a href="https://github.com/Mahakal05T/Notes-App.git" target="_blank" class="project-link">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -495,13 +500,15 @@
       <!-- Development Project 2 -->
       <div class="project-card rounded-xl overflow-hidden shadow-lg" data-category="development">
         <img src="img/user-auth.png" alt="Web Application"
-          class="w-full h-64 object-cover" />
+          class="w-full h-64 object-cover project-img" />
         <div class="project-content">
           <span class="project-category">DEVELOPMENT</span>
           <h3 class="project-title">User-Auth System</h3>
           <div class="project-icons">
-            <button><i class="fas fa-expand"></i></button>
-            <button><i class="fas fa-external-link-alt"></i></button>
+            <button class="expand-btn"><i class="fas fa-expand"></i></button>
+            <a href="https://github.com/Mahakal05T/Auth-system.git" target="_blank" class="project-link">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -511,17 +518,24 @@
       <!-- Development Project 3 -->
       <div class="project-card rounded-xl overflow-hidden shadow-lg" data-category="development">
         <img src="img/portfolio.png" alt="API Development"
-          class="w-full h-64 object-cover" />
+          class="w-full h-64 object-cover project-img" />
         <div class="project-content">
           <span class="project-category">DEVELOPMENT</span>
           <h3 class="project-title">Potfolio Websites</h3>
           <div class="project-icons">
-            <button><i class="fas fa-expand"></i></button>
-            <button><i class="fas fa-external-link-alt"></i></button>
+            <button class="expand-btn"><i class="fas fa-expand"></i></button>
+            <a href="https://github.com/Mahakal05T/Personal-Portfolio-.git" target="_blank" class="project-link">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
           </div>
         </div>
       </div>
     </section>
+    <!-- 🔹 Image Modal (added only this part) -->
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="expandedImg">
+    </div>
   </div>
 </section>
 
@@ -633,6 +647,5 @@
 
 
   <script src="script.js"></script>
-
 </body>
 </html>
