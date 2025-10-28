@@ -10,28 +10,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
 </head>
 <body class="bg-white text-[#0B1E38]">
-<header class="w-full flex items-center py-[20px] sticky top-0 z-50 bg-white">
+<header class="w-full flex items-center pt-[20px] sticky top-0 z-50 bg-white">
   <nav class="w-full mx-[20px] xl:mx-[100.4px] flex items-center justify-between bg-white rounded-[50px] px-[20px] py-[5px] shadow-[0_0_20px_rgba(11,30,56,0.1)] relative">
     
     <!-- Logo -->
     <div class="text-[20px] font-normal">SinghWorks</div>
 
-
-    <!-- Hamburger Button for Mobile & Tablets -->
+    <!-- Hamburger Button -->
     <button id="menu-btn" class="xl:hidden text-2xl text-[#0B1E38] focus:outline-none z-50">
       <i class="fas fa-bars"></i>
     </button>
 
-
     <!-- Nav Links -->
-    <ul id="menu" class="hidden xl:flex absolute xl:static top-full left-0 xl:left-auto w-full xl:w-auto bg-white xl:bg-transparent shadow-lg xl:shadow-none rounded-lg xl:rounded-none flex-col xl:flex-row items-center text-[16px] font-normal transition-all duration-300 ease-in-out mt-2 xl:mt-0 py-4 xl:py-0">
+    <ul id="menu" class="hidden xl:flex absolute xl:static top-full left-0 xl:left-auto w-full xl:w-auto bg-white xl:bg-transparent shadow-lg xl:shadow-none rounded-lg xl:rounded-none flex-col xl:flex-row items-center text-[16px] font-normal transition-all duration-300 ease-in-out xl:transform-none transform xl:scale-y-100 scale-y-0 xl:origin-center origin-top  mt-2 xl:mt-0 py-4 xl:py-0">
       <li class="w-full xl:w-auto text-center px-[15px] py-[15px] hover:bg-gray-50 xl:hover:bg-transparent"><a href="#">Home</a></li>
       <li class="w-full xl:w-auto text-center px-[15px] py-[15px] hover:bg-gray-50 xl:hover:bg-transparent"><a href="#About">About</a></li>
       <li class="w-full xl:w-auto text-center px-[15px] py-[15px] hover:bg-gray-50 xl:hover:bg-transparent"><a href="#Portfolio">Portfolio</a></li>
       <li class="w-full xl:w-auto text-center px-[15px] py-[15px] hover:bg-gray-50 xl:hover:bg-transparent"><a href="#Contact">Contact</a></li>
     </ul>
-
-    
 
     <!-- Social Icons -->
     <div class="hidden xl:flex items-center space-x-4 text-[#6B7280] text-lg">
@@ -177,21 +173,9 @@
         </div>
 
       </div>
-
-      <!-- Badge -->
-      <!-- Tagline Badge -->
-      <!--<div class="flex justify-center mt-8">
-        <div class="flex items-center gap-2 bg-[#f1f7fd] text-[#1a365d] px-6 py-3 rounded-full text-sm shadow-sm border border-[#d3e2f5]">
-          <img src="https://twemoji.maxcdn.com/v/latest/svg/2615.svg" alt="coffee" class="w-4 h-4"/>
-          Coffee-fueled designer based in Portland
-        </div>
-      </div>--->
-
       <!-- Buttons -->
       <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
-       <!--- <a href="#work" class="bg-[#0056d2] text-white font-semibold py-2 px-6 rounded-full hover:bg-[#0044aa] transition">
-          View My Work
-        </a>--->
+      
         <a href="Resume.pdf" class="border-2 border-[#0056d2] text-[#0056d2] font-semibold py-2 px-6 rounded-full hover:bg-[#eaf1fc] transition" target="_blank">
           Download Resume
         </a>
@@ -200,7 +184,7 @@
   </div>
 </section>
 
-   <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8" id="skills">
+<section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8" id="skills">
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col xl:flex-row gap-8 lg:gap-12">
                 
@@ -463,7 +447,7 @@
     </div>
 
     <!-- Projects Grid -->
-    <section id="projects" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+    <section id="Portfolio" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
       
       <!-- UI/UX Project 1 -->
       <div class="project-card rounded-xl overflow-hidden shadow-lg" data-category="uiux">
@@ -629,7 +613,7 @@
 
 
 <!-- Scroll to top button -->
-<button id="scrollTop" class="scroll-top fixed bottom-6 right-6 bg-gradient-to-r from-orange-500 to-orange-600 w-14 h-14 rounded-full flex items-center justify-center text-white text-xl shadow-lg hover:shadow-xl z-50">
+<button id="scroll-top" class="scroll-top fixed bottom-6 right-6 bg-gradient-to-r from-orange-500 to-orange-600 w-14 h-14 rounded-full flex items-center justify-center text-white text-xl shadow-lg hover:shadow-xl z-50">
   <i class="fas fa-arrow-up"></i>
 </button>
 
