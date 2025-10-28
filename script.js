@@ -1,55 +1,46 @@
-document.addEventListener('DOMContentLoaded', function() {
-  
+document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.getElementById('menu-btn');
   const menu = document.getElementById('menu');
+  const icon = menuBtn.querySelector('i');
+  let open = false;
 
-  if (menuBtn && menu) {
-    
-    // Toggle menu on button click
-    menuBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      menu.classList.toggle('hidden');
-      menu.classList.toggle('flex');
-      
-      // Toggle icon
-      const icon = menuBtn.querySelector('i');
-      if (icon) {
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
+  // Toggle menu
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    open = !open;
+
+    if (open) {
+      menu.classList.remove('hidden');
+      setTimeout(() => menu.classList.add('scale-y-100'), 10);
+      icon.classList.replace('fa-bars', 'fa-times');
+    } else {
+      menu.classList.remove('scale-y-100');
+      setTimeout(() => menu.classList.add('hidden'), 300);
+      icon.classList.replace('fa-times', 'fa-bars');
+    }
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (open && !menu.contains(e.target) && !menuBtn.contains(e.target)) {
+      menu.classList.remove('scale-y-100');
+      setTimeout(() => menu.classList.add('hidden'), 300);
+      icon.classList.replace('fa-times', 'fa-bars');
+      open = false;
+    }
+  });
+
+  // Close menu when link clicked
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (open) {
+        menu.classList.remove('scale-y-100');
+        setTimeout(() => menu.classList.add('hidden'), 300);
+        icon.classList.replace('fa-times', 'fa-bars');
+        open = false;
       }
     });
-
-    // Close menu when clicking on links
-    const menuLinks = menu.querySelectorAll('a');
-    menuLinks.forEach(function(link) {
-      link.addEventListener('click', function() {
-        menu.classList.add('hidden');
-        menu.classList.remove('flex');
-        
-        const icon = menuBtn.querySelector('i');
-        if (icon) {
-          icon.classList.add('fa-bars');
-          icon.classList.remove('fa-times');
-        }
-      });
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
-        menu.classList.add('hidden');
-        menu.classList.remove('flex');
-        
-        const icon = menuBtn.querySelector('i');
-        if (icon) {
-          icon.classList.add('fa-bars');
-          icon.classList.remove('fa-times');
-        }
-      }
-    });
-    
-  }
-  
+  });
 });
 
 
