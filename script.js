@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+        AOS.init({
+        duration: 1200,
+        once: true,
+        easing: 'ease-in-out',
+        });
+     });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.getElementById('menu-btn');
   const menu = document.getElementById('menu');
   const icon = menuBtn.querySelector('i');
