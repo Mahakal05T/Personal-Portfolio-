@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 </head>
 <body class="bg-white text-[#0B1E38]">
 <header class="w-full flex items-center pt-[20px] sticky top-0 z-50 bg-white">
@@ -39,39 +41,49 @@
 </header>
 
 
-  <main class="mx-[5%] py-12 flex flex-col md:flex-row items-center justify-between gap-8">
-    <section class="flex-1 text-center md:text-left">
-      <h1 class="text-[32px] sm:text-[36px] md:text-[48px] font-semibold leading-tight mb-4">
-        Crafting Digital <br class="hidden md:block"/>
-        Experiences with Passion
-      </h1>
+<main class="mx-[5%] py-12 flex flex-col md:flex-row items-center justify-between gap-8">
+  <!-- Left Text Section -->
+  <section 
+    class="flex-1 text-center md:text-left"
+    data-aos="fade-right"
+  >
+    <h1 class="text-[32px] sm:text-[36px] md:text-[48px] font-semibold leading-tight mb-4"
+      data-aos="fade-up" data-aos-delay="100">
+      Crafting Digital <br class="hidden md:block"/>
+      Experiences with Passion
+    </h1>
 
-      <p class="text-[#6B7280] text-[16px] sm:text-[18px] md:text-[20px] mb-8">
-        I create digital experiences that inspire and engage. With a passion for clean design and innovative solutions, I transform ideas into beautiful, functional realities.
-      </p>
+    <p class="text-[#6B7280] text-[16px] sm:text-[18px] md:text-[20px] mb-8"
+      data-aos="fade-up" data-aos-delay="200">
+      I create digital experiences that inspire and engage. With a passion for clean design and innovative solutions, I transform ideas into beautiful, functional realities.
+    </p>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mb-10">
-        <button class="bg-[#E87E32] text-white font-semibold px-6 py-3 rounded-full hover:bg-[#d46f2a] transition w-full sm:w-auto">
-          <a href="#Portfolio">View My Work</a>
-        </button>
-        <button class="border border-[#E87E32] text-[#E87E32] font-normal px-6 py-3 rounded-full hover:bg-[#E87E32] hover:text-[#FFFFFF] transition w-full sm:w-auto">
-          <a href="#Contact">Let's Connect</a>
-        </button>
-      </div>
-    </section>
-
-    <!-- Right Section -->
-    <div class="relative flex-1 flex justify-center items-center p-4 sm:p-6 md:p-8">
-      <!-- Profile image -->
-      <img alt="Profile image"
-        class="relative z-10 w-[90%] max-w-[715px] h-auto rounded-lg"
-        src="img/profile-1.webp" />
+    <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mb-10"
+      data-aos="fade-up" data-aos-delay="300">
+      <button class="bg-[#E87E32] text-white font-semibold px-6 py-3 rounded-full hover:bg-[#d46f2a] transition w-full sm:w-auto">
+        <a href="#Portfolio">View My Work</a>
+      </button>
+      <button class="border border-[#E87E32] text-[#E87E32] font-normal px-6 py-3 rounded-full hover:bg-[#E87E32] hover:text-[#FFFFFF] transition w-full sm:w-auto">
+        <a href="#Contact">Let's Connect</a>
+      </button>
     </div>
-  </main>
+  </section>
+
+  <!-- Right Image Section -->
+  <div 
+    class="relative flex-1 flex justify-center items-center p-4 sm:p-6 md:p-8"
+    data-aos="zoom-in" data-aos-delay="400"
+  >
+    <img alt="Profile image"
+      class="relative z-10 w-[90%] max-w-[715px] h-auto rounded-lg"
+      src="img/profile-1.webp" />
+  </div>
+</main>
+
 
 <section class="max-w-full lg:px-0 px-4 sm:px-6 py-16" id="About">
   <!-- Section Title -->
-  <div class="lg:mx-[100.400px] lg:mb-0 mb-12 lg:px-3 lg:pb-[60px]">
+  <div class="lg:mx-[100.400px] lg:mb-0 mb-12 lg:px-3 lg:pb-[60px]" data-aos="fade-up">
     <h2 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-[#1a365d]">About Me</h2>
     <p class="text-sm sm:text-base lg:text-base text-[#a3b3cc] mt-[5px]">
       Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit.
@@ -81,50 +93,58 @@
   <!-- About Grid -->
   <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 lg:mx-[100.400px] lg:px-3">
     <!-- Left: Profile Image & Name -->
-    <div class="flex justify-center lg:items-center lg:justify-end w-full lg:w-1/3">
+    <div class="flex justify-center lg:items-center lg:justify-end w-full lg:w-1/3" data-aos="fade-right" data-aos-delay="100">
       <div class="text-center lg:text-center">
-        <div class="border-5 border-[#065cc2] rounded-full  w-fit mx-auto lg:mb-10">
+        <div class="border-5 border-[#065cc2] rounded-full w-fit mx-auto lg:mb-10" data-aos="zoom-in" data-aos-delay="200">
           <img
             src="img/profile-square-1.webp"
             alt="Eliot Johnson"
             class="rounded-full w-36 h-36 sm:w-40 sm:h-40 lg:w-56 lg:h-56 object-cover"
           />
         </div>
-        <h3 class="font-gv text-xl sm:text-2xl lg:text-4xl mb-4 text-[#1a365d]">Ayush Singh</h3>
-        <p class="text-sm sm:text-sm lg:text-sm text-[#a3b3cc] max-w-xs mx-auto lg:mx-0">
+        <h3 class="font-gv text-xl sm:text-2xl lg:text-4xl mb-4 text-[#1a365d]" data-aos="fade-up" data-aos-delay="300">
+          Ayush Singh
+        </h3>
+        <p class="text-sm sm:text-sm lg:text-sm text-[#a3b3cc] max-w-xs mx-auto lg:mx-0" data-aos="fade-up" data-aos-delay="400">
           Building meaningful digital experiences through creative code.
         </p>
       </div>
     </div>
 
     <!-- Right: Content -->
-    <div class="flex-1">
+    <div class="flex-1" data-aos="fade-left" data-aos-delay="150">
       <!-- Intro -->
       <div class="intro mb-10 lg:mb-10">
-        <h1 class="text-xl sm:text-2xl lg:text-[40px] font-bold text-[#1a365d] lg:tracking-tight mb-5 lg:mb-5">
+        <h1 class="text-xl sm:text-2xl lg:text-[40px] font-bold text-[#1a365d] lg:tracking-tight mb-5 lg:mb-5" data-aos="fade-up" data-aos-delay="200">
           Hi, I’m Ayush – a Creative Developer
         </h1>
-        <p class="text-xs sm:text-sm lg:text-base text-[#314862] mb-4 lg:mb-4 leading-relaxed text-justify">
+        <p class="text-xs sm:text-sm lg:text-base text-[#314862] mb-4 lg:mb-4 leading-relaxed text-justify" data-aos="fade-up" data-aos-delay="300">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
         </p>
       </div>
+
       <!-- Skills Cards -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-10">
-        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+          data-aos="zoom-in-up" data-aos-delay="100">
           <i class="fas fa-paint-brush text-blue-600 text-2xl sm:text-3xl mb-4"></i>
           <h4 class="text-base sm:text-lg font-semibold mb-3 text-gray-800">UI/UX Design</h4>
           <p class="text-sm text-gray-600">
             Mauris blandit aliquet elit, eget tincidunt nibh pulvinar.
           </p>
         </div>
-        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+          data-aos="zoom-in-up" data-aos-delay="200">
           <i class="fas fa-code text-blue-600 text-2xl sm:text-3xl mb-4"></i>
           <h4 class="text-base sm:text-lg font-semibold mb-3 text-gray-800">Frontend Dev</h4>
           <p class="text-sm text-gray-600">
             Sed porttitor lectus nibh. Cras ultricies ligula sed magna.
           </p>
         </div>
-        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 sm:col-span-2 lg:col-span-1">
+
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 sm:col-span-2 lg:col-span-1"
+          data-aos="zoom-in-up" data-aos-delay="300">
           <i class="fas fa-camera-retro text-blue-600 text-2xl sm:text-3xl mb-4"></i>
           <h4 class="text-base sm:text-lg font-semibold mb-3 text-gray-800">Photography</h4>
           <p class="text-sm text-gray-600">
@@ -134,14 +154,9 @@
       </div>
 
       <!-- Timeline -->
-      <div class="relative ml-4 border-l-2 border-[#1a365d] space-y-6">
-
-        <!-- Timeline Item -->
-        <div class="relative pl-6">
-          <!-- Dot -->
+      <div class="relative ml-4 border-l-2 border-[#1a365d] space-y-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="relative pl-6" data-aos="fade-up" data-aos-delay="250">
           <div class="absolute -left-[10px] top-1 w-4 h-4 bg-[#1a365d] rounded-full border-2 border-white"></div>
-          
-          <!-- Content -->
           <div class="bg-[#f1f7fd] rounded-md p-4 shadow-sm">
             <div class="text-base font-bold text-[#1a365d] mb-1">2022</div>
             <div class="text-sm text-[#1a365d]">
@@ -150,8 +165,7 @@
           </div>
         </div>
 
-        <!-- Repeat -->
-        <div class="relative pl-6">
+        <div class="relative pl-6" data-aos="fade-up" data-aos-delay="350">
           <div class="absolute -left-[10px] top-1 w-4 h-4 bg-[#1a365d] rounded-full border-2 border-white"></div>
           <div class="bg-[#f1f7fd] rounded-md p-4 shadow-sm">
             <div class="text-base font-bold text-[#1a365d] mb-1">2026</div>
@@ -161,8 +175,7 @@
           </div>
         </div>
 
-        <!-- Repeat -->
-        <div class="relative pl-6">
+        <div class="relative pl-6" data-aos="fade-up" data-aos-delay="450">
           <div class="absolute -left-[10px] top-1 w-4 h-4 bg-[#1a365d] rounded-full border-2 border-white"></div>
           <div class="bg-[#f1f7fd] rounded-md p-4 shadow-sm">
             <div class="text-base font-bold text-[#1a365d] mb-1">2022</div>
@@ -171,11 +184,10 @@
             </div>
           </div>
         </div>
-
       </div>
+
       <!-- Buttons -->
-      <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
-      
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6" data-aos="zoom-in" data-aos-delay="400">
         <a href="Resume.pdf" class="border-2 border-[#0056d2] text-[#0056d2] font-semibold py-2 px-6 rounded-full hover:bg-[#eaf1fc] transition" target="_blank">
           Download Resume
         </a>
@@ -183,6 +195,7 @@
     </div>
   </div>
 </section>
+>
 
 <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8" id="skills">
         <div class="max-w-7xl mx-auto">
@@ -193,7 +206,8 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                         
                         <!-- Frontend Development Card -->
-                        <article class="skill-card h-full border border-blue-200 rounded-2xl pt-4 pb-6 px-4 sm:px-6 relative bg-white shadow-lg">
+                        <article class="skill-card border border-blue-200 rounded-2xl pt-4 pb-6 px-4 sm:px-6 relative bg-white shadow-lg"
+                                data-aos="fade-up" data-aos-delay="100">
                             <div class="absolute top-0 left-4 right-4 sm:left-6 sm:right-6 h-1 bg-blue-800 rounded-t-2xl"></div>
                             
                             <div class="flex items-center gap-3 sm:gap-4 mb-6">
@@ -237,7 +251,8 @@
                         </article>
 
                         <!-- Backend Development Card -->
-                        <article class="skill-card h-full border border-blue-200 rounded-2xl pt-4 pb-6 px-4 sm:px-6 relative bg-white shadow-lg">
+                        <article class="skill-card border border-blue-200 rounded-2xl pt-4 pb-6 px-4 sm:px-6 relative bg-white shadow-lg"
+                   data-aos="fade-up" data-aos-delay="200">
                             <div class="absolute top-0 left-4 right-4 sm:left-6 sm:right-6 h-1 bg-blue-800 rounded-t-2xl"></div>
                             
                             <div class="flex items-center gap-3 sm:gap-4 mb-6">
@@ -281,7 +296,8 @@
                         </article>
 
                         <!-- Design & Tools Card -->
-                        <article class="skill-card h-full border border-blue-200 rounded-2xl pt-4 pb-6 px-4 sm:px-6 relative bg-white shadow-lg">
+                        <article  class="skill-card border border-blue-200 rounded-2xl pt-4 pb-6 px-4 sm:px-6 relative bg-white shadow-lg"
+                   data-aos="fade-up" data-aos-delay="300">
                             <div class="absolute top-0 left-4 right-4 sm:left-6 sm:right-6 h-1 bg-blue-800 rounded-t-2xl"></div>
                             
                             <div class="flex items-center gap-3 sm:gap-4 mb-6">
@@ -315,7 +331,8 @@
                         </article>
 
                         <!-- Cloud & DevOps Card -->
-                        <article class="skill-card h-full border border-blue-200 rounded-2xl pt-4 pb-6 px-4 sm:px-6 relative bg-white shadow-lg">
+                        <article class="skill-card border border-blue-200 rounded-2xl pt-4 pb-6 px-4 sm:px-6 relative bg-white shadow-lg"
+                   data-aos="fade-up" data-aos-delay="400">
                             <div class="absolute top-0 left-4 right-4 sm:left-6 sm:right-6 h-1 bg-blue-800 rounded-t-2xl"></div>
                             
                             <div class="flex items-center gap-3 sm:gap-4 mb-6">
@@ -361,7 +378,7 @@
                 </div>
 
                 <!-- Professional Expertise Sidebar -->
-                <aside class="w-full xl:w-96 xl:flex-shrink-0">
+                <aside class="w-full xl:w-96 xl:flex-shrink-0" data-aos="fade-left" data-aos-delay="300">
                     <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 h-full">
                         <div class="flex flex-col h-full">
                             <div class="flex-1">
@@ -421,11 +438,12 @@
     </section>
 
 
-<!-- Portfolio Section -->
+<!-- ✅ Portfolio Section -->
 <section class="py-12 sm:py-16 lg:py-20" id="Portfolio">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
     <!-- Title -->
-    <div class="text-center mb-12 lg:mb-16">
+    <div class="text-center mb-12 lg:mb-16" data-aos="fade-up">
       <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">Portfolio</h2>
       <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
         Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
@@ -433,10 +451,9 @@
     </div>
 
     <!-- Filter Tabs -->
-    <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-12">
-      <button data-filter="all" class="filter-btn filter-active rounded-full py-3 px-6 text-sm font-semibold transition-all">
-        <i class="fas fa-th mr-2"></i>
-        All Projects
+    <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-12" data-aos="zoom-in" data-aos-delay="200">
+      <button data-filter="all" class="filter-btn filter-active rounded-full py-3 px-6 text-sm font-semibold">
+        <i class="fas fa-th mr-2"></i> All Projects
       </button>
       <button data-filter="uiux" class="filter-btn filter-inactive rounded-full py-3 px-6 text-sm font-semibold transition-all">
         UI/UX
@@ -447,107 +464,122 @@
     </div>
 
     <!-- Projects Grid -->
-    <section id="Portfolio" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
-      
-      <!-- UI/UX Project 1 -->
-      <div class="project-card rounded-xl overflow-hidden shadow-lg" data-category="uiux">
-        <img src="img/Portfolio desgin.png" alt="UI/UX Project"
-          class="w-full h-64 object-cover project-img" />
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+
+      <!-- Project 1 -->
+      <div class="project-card" data-category="uiux" data-aos="fade-up" data-aos-delay="100">
+        <img src="img/Portfolio desgin.png" alt="UI/UX Project" class="project-img w-full h-64 object-cover" />
         <div class="project-content">
-          <span class="project-category">UI/UX DESIGN</span>
-          <h3 class="project-title">portfolio websites</h3>
-          <div class="project-icons">
-            <button class="expand-btn"><i class="fas fa-expand"></i></button>
-            <a href="https://www.figma.com/design/CXW8J7ewjnrrNUJiJgNYkG/Untitled?node-id=0-1&t=PTqFTAA0esZnVR1F-1" target="_blank" class="project-link">
+          <span class="text-sm uppercase mb-1">UI/UX Design</span>
+          <h3 class="text-xl font-semibold mb-3">Portfolio Website</h3>
+          <div class="flex gap-4">
+            <button class="expand-btn text-white hover:text-orange-400 transition"><i class="fas fa-expand"></i></button>
+            <a href="https://www.figma.com/design/CXW8J7ewjnrrNUJiJgNYkG/Untitled?node-id=0-1&t=PTqFTAA0esZnVR1F-1" target="_blank" class="text-white hover:text-orange-400 transition">
               <i class="fas fa-external-link-alt"></i>
             </a>
           </div>
         </div>
       </div>
 
-      <!-- Development Project 1 -->
-      <div class="project-card rounded-xl overflow-hidden shadow-lg" data-category="development">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop" alt="Development Project"
-          class="w-full h-64 object-cover project-img" />
+      <!-- Project 2 -->
+      <div class="project-card" data-category="development" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop" alt="Development Project" class="project-img w-full h-64 object-cover" />
         <div class="project-content">
-          <span class="project-category">DEVELOPMENT</span>
-          <h3 class="project-title">Notes App</h3>
-          <div class="project-icons">
-            <button class="expand-btn"><i class="fas fa-expand"></i></button>
-            <a href="https://github.com/Mahakal05T/Notes-App.git" target="_blank" class="project-link">
+          <span class="text-sm uppercase mb-1">Development</span>
+          <h3 class="text-xl font-semibold mb-3">Notes App</h3>
+          <div class="flex gap-4">
+            <button class="expand-btn text-white hover:text-orange-400 transition"><i class="fas fa-expand"></i></button>
+            <a href="https://github.com/Mahakal05T/Notes-App.git" target="_blank" class="text-white hover:text-orange-400 transition">
               <i class="fas fa-external-link-alt"></i>
             </a>
           </div>
         </div>
       </div>
 
-      <!-- Development Project 2 -->
-      <div class="project-card rounded-xl overflow-hidden shadow-lg" data-category="development">
-        <img src="img/user-auth.png" alt="Web Application"
-          class="w-full h-64 object-cover project-img" />
+      <!-- Project 3 -->
+      <div class="project-card" data-category="development" data-aos="fade-up" data-aos-delay="300">
+        <img src="img/user-auth.png" alt="Auth System" class="project-img w-full h-64 object-cover" />
         <div class="project-content">
-          <span class="project-category">DEVELOPMENT</span>
-          <h3 class="project-title">User-Auth System</h3>
-          <div class="project-icons">
-            <button class="expand-btn"><i class="fas fa-expand"></i></button>
-            <a href="https://github.com/Mahakal05T/Auth-system.git" target="_blank" class="project-link">
+          <span class="text-sm uppercase mb-1">Development</span>
+          <h3 class="text-xl font-semibold mb-3">User-Auth System</h3>
+          <div class="flex gap-4">
+            <button class="expand-btn text-white hover:text-orange-400 transition"><i class="fas fa-expand"></i></button>
+            <a href="https://github.com/Mahakal05T/Auth-system.git" target="_blank" class="text-white hover:text-orange-400 transition">
               <i class="fas fa-external-link-alt"></i>
             </a>
           </div>
         </div>
       </div>
 
-
-
-      <!-- Development Project 3 -->
-      <div class="project-card rounded-xl overflow-hidden shadow-lg" data-category="development">
-        <img src="img/portfolio.png" alt="API Development"
-          class="w-full h-64 object-cover project-img" />
+      <!-- Project 4 -->
+      <div class="project-card" data-category="development" data-aos="fade-up" data-aos-delay="400">
+        <img src="img/portfolio.png" alt="Portfolio Project" class="project-img w-full h-64 object-cover" />
         <div class="project-content">
-          <span class="project-category">DEVELOPMENT</span>
-          <h3 class="project-title">Potfolio Websites</h3>
-          <div class="project-icons">
-            <button class="expand-btn"><i class="fas fa-expand"></i></button>
-            <a href="https://github.com/Mahakal05T/Personal-Portfolio-.git" target="_blank" class="project-link">
+          <span class="text-sm uppercase mb-1">Development</span>
+          <h3 class="text-xl font-semibold mb-3">Portfolio Website</h3>
+          <div class="flex gap-4">
+            <button class="expand-btn text-white hover:text-orange-400 transition"><i class="fas fa-expand"></i></button>
+            <a href="https://github.com/Mahakal05T/Personal-Portfolio-.git" target="_blank" class="text-white hover:text-orange-400 transition">
               <i class="fas fa-external-link-alt"></i>
             </a>
           </div>
         </div>
       </div>
-    </section>
-    <!-- 🔹 Image Modal (added only this part) -->
+
+    </div>
+
+    <!-- Modal -->
     <div id="imageModal" class="modal">
       <span class="close">&times;</span>
-      <img class="modal-content" id="expandedImg">
+      <img id="expandedImg" class="modal-content" alt="Expanded Project">
     </div>
   </div>
 </section>
 
-
-<!-- Contact Section - RESPONSIVE VERSION -->
-<section class="bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-800 py-12 sm:py-16 lg:py-20" id="Contact">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Contact Section - Animated Version -->
+<section 
+  class="bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-800 py-12 sm:py-16 lg:py-20 overflow-hidden" 
+  id="Contact"
+>
+  <div 
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+    data-aos="fade-up"
+    data-aos-duration="1000"
+  >
     <!-- Title -->
-    <div class="text-center mb-12 lg:mb-16">
-      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">Contact Me</h2>
+    <div 
+      class="text-center mb-12 lg:mb-16"
+      data-aos="fade-down"
+      data-aos-duration="1000"
+    >
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+        Contact Me
+      </h2>
       <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
         Get in touch with me for any questions, support, or collaboration opportunities. I'd love to hear from you.
       </p>
     </div>
 
-
     <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
       <!-- Left Contact Info -->
-      <div class="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-6 md:p-8 lg:p-10 w-full lg:flex-1 lg:max-w-md text-white shadow-2xl">
+      <div 
+        class="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-6 md:p-8 lg:p-10 w-full lg:flex-1 lg:max-w-md text-white shadow-2xl transform transition-all duration-700 hover:-translate-y-2 hover:shadow-3xl"
+        data-aos="fade-right"
+        data-aos-delay="200"
+      >
         <h2 class="text-xl md:text-2xl font-bold mb-6">Contact Info</h2>
         <p class="text-blue-100 mb-8 md:mb-10 leading-relaxed text-sm md:text-base">
           You can reach me using the information below. I'm always ready to help and answer your queries.
         </p>
 
-
         <div class="space-y-6 md:space-y-8">
-          <div class="flex items-start gap-4">
-            <div class="bg-blue-500/30 p-3 md:p-4 rounded-2xl flex items-center justify-center shrink-0">
+          <!-- Location -->
+          <div 
+            class="flex items-start gap-4" 
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="bg-blue-500/30 p-3 md:p-4 rounded-2xl flex items-center justify-center shrink-0 animate-pulse">
               <i class="fas fa-map-marker-alt text-white text-lg md:text-xl"></i>
             </div>
             <div class="min-w-0">
@@ -557,9 +589,13 @@
             </div>
           </div>
 
-
-          <div class="flex items-start gap-4">
-            <div class="bg-blue-500/30 p-3 md:p-4 rounded-2xl flex items-center justify-center shrink-0">
+          <!-- Phone -->
+          <div 
+            class="flex items-start gap-4"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="bg-blue-500/30 p-3 md:p-4 rounded-2xl flex items-center justify-center shrink-0 animate-pulse">
               <i class="fas fa-phone-alt text-white text-lg md:text-xl"></i>
             </div>
             <div class="min-w-0">
@@ -569,9 +605,13 @@
             </div>
           </div>
 
-
-          <div class="flex items-start gap-4">
-            <div class="bg-blue-500/30 p-3 md:p-4 rounded-2xl flex items-center justify-center shrink-0">
+          <!-- Email -->
+          <div 
+            class="flex items-start gap-4"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="bg-blue-500/30 p-3 md:p-4 rounded-2xl flex items-center justify-center shrink-0 animate-pulse">
               <i class="fas fa-envelope text-white text-lg md:text-xl"></i>
             </div>
             <div class="min-w-0">
@@ -583,26 +623,35 @@
         </div>
       </div>
 
-
       <!-- Right Form -->
-      <form class="bg-white rounded-2xl p-6 md:p-8 lg:p-10 w-full lg:flex-1 lg:max-w-2xl shadow-2xl" action="#" method="POST">
+      <form 
+        class="bg-white rounded-2xl p-6 md:p-8 lg:p-10 w-full lg:flex-1 lg:max-w-2xl shadow-2xl"
+        data-aos="fade-left"
+        data-aos-delay="400"
+        data-aos-duration="1200"
+        action="#"
+        method="POST"
+      >
         <h2 class="text-xl md:text-2xl font-bold mb-6 text-gray-800">Get In Touch</h2>
         <p class="text-gray-600 mb-8 leading-relaxed text-sm md:text-base">
           Fill out the form below and I'll get back to you as soon as possible.
         </p>
 
-
         <div class="flex flex-col sm:flex-row gap-6 mb-6">
-          <input type="text" name="name" placeholder="Your Name" class="form-input border-2 border-gray-200 rounded-xl p-4 flex-1 text-base text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full" required />
-          <input type="email" name="email" placeholder="Your Email" class="form-input border-2 border-gray-200 rounded-xl p-4 flex-1 text-base text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full" required />
+          <input type="text" name="name" placeholder="Your Name" class="form-input border-2 border-gray-200 rounded-xl p-4 flex-1 text-base text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full transition-transform duration-500 hover:-translate-y-1" required />
+          <input type="email" name="email" placeholder="Your Email" class="form-input border-2 border-gray-200 rounded-xl p-4 flex-1 text-base text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full transition-transform duration-500 hover:-translate-y-1" required />
         </div>
 
-
-        <input type="text" name="subject" placeholder="Subject" class="form-input border-2 border-gray-200 rounded-xl p-4 w-full mb-6 text-base text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required />
+        <input type="text" name="subject" placeholder="Subject" class="form-input border-2 border-gray-200 rounded-xl p-4 w-full mb-6 text-base text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-transform duration-500 hover:-translate-y-1" required />
         
-        <textarea name="message" placeholder="Message" rows="6" class="form-input border-2 border-gray-200 rounded-xl p-4 w-full mb-8 text-base text-gray-700 placeholder-gray-400 resize-y focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required></textarea>
+        <textarea name="message" placeholder="Message" rows="6" class="form-input border-2 border-gray-200 rounded-xl p-4 w-full mb-8 text-base text-gray-700 placeholder-gray-400 resize-y focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-transform duration-500 hover:-translate-y-1" required></textarea>
         
-        <button type="submit" class="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-700 text-white text-base font-semibold rounded-xl px-8 py-4 hover:from-blue-700 hover:to-blue-800 transition-all transform hover:-translate-y-1 hover:shadow-lg">
+        <button 
+          type="submit"
+          class="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-700 text-white text-base font-semibold rounded-xl px-8 py-4 hover:from-blue-700 hover:to-blue-800 transition-all transform hover:-translate-y-1 hover:shadow-lg focus:ring-4 focus:ring-blue-300"
+          data-aos="zoom-in"
+          data-aos-delay="600"
+        >
           <i class="fas fa-paper-plane mr-2"></i>
           Send Message
         </button>
