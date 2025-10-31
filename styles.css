@@ -33,16 +33,25 @@ body {
     background: #dbeafe;
     box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
   }
+   
+  .progress-bar {
+    width: 0%;
+    transition: width 2s ease-out;
+  }
 
-/* Custom animations for progress bars */
-@keyframes progressAnimation {
-  from { width: 0%; }
-  to { width: var(--progress-width); }
+  .skill-card[data-aos='fade-up'].aos-animate .progress-bar {
+    width: var(--progress-width);
+  }
+
+  .skill-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
-        
-.progress-bar {
-  animation: progressAnimation 1.5s ease-out forwards;
-}
+
+
 
 /* Portfolio section styles */
     .filter-active {
