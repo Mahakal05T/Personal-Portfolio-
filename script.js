@@ -1,16 +1,26 @@
+// AOS + sticky nav
 document.addEventListener('DOMContentLoaded', () => {
-        AOS.init({
-        duration: 1200,
-        once: true,
-        easing: 'ease-in-out',
-        });
-     });
+  AOS.init({
+    duration: 1200,
+    once: true,
+    easing: 'ease-in-out',
+  });
+});
 
+// Nav shadow on scroll
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  if (!nav) return;
+  if (window.scrollY > 10) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
 
-
+// Mobile menu
 document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.getElementById('menu-btn');
   const menu = document.getElementById('menu');
+  if (!menuBtn || !menu) return;
+
   const icon = menuBtn.querySelector('i');
   let open = false;
 
@@ -21,12 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (open) {
       menu.classList.remove('hidden');
-      setTimeout(() => menu.classList.add('scale-y-100'), 10);
-      icon.classList.replace('fa-bars', 'fa-times');
+      requestAnimationFrame(() => {
+        menu.classList.add('scale-y-100');
+      });
+      if (icon) icon.classList.replace('fa-bars', 'fa-times');
     } else {
       menu.classList.remove('scale-y-100');
       setTimeout(() => menu.classList.add('hidden'), 300);
-      icon.classList.replace('fa-times', 'fa-bars');
+      if (icon) icon.classList.replace('fa-times', 'fa-bars');
     }
   });
 
@@ -35,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (open && !menu.contains(e.target) && !menuBtn.contains(e.target)) {
       menu.classList.remove('scale-y-100');
       setTimeout(() => menu.classList.add('hidden'), 300);
-      icon.classList.replace('fa-times', 'fa-bars');
+      if (icon) icon.classList.replace('fa-times', 'fa-bars');
       open = false;
     }
   });
@@ -46,15 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (open) {
         menu.classList.remove('scale-y-100');
         setTimeout(() => menu.classList.add('hidden'), 300);
-        icon.classList.replace('fa-times', 'fa-bars');
+        if (icon) icon.classList.replace('fa-times', 'fa-bars');
         open = false;
       }
     });
   });
 });
-
-
-
 
 // Navigation Active Section
 const navLinks = document.querySelectorAll("nav ul li a");
@@ -62,7 +71,6 @@ const navLinks = document.querySelectorAll("nav ul li a");
 function highlightActiveLink() {
   let currentSection = "";
 
-  // Check which section is visible
   document.querySelectorAll("section[id]").forEach(section => {
     const sectionTop = section.offsetTop - 120;
     const sectionHeight = section.offsetHeight;
@@ -72,30 +80,27 @@ function highlightActiveLink() {
     }
   });
 
-  // Special case: treat "skills" as part of "About"
-  if (currentSection === "skills") {
-    currentSection = "About";
-  }
+  // Treat "skills" as part of "About"
+  if (currentSection === "skills") currentSection = "About";
 
-  // Update active class with smooth transition
   navLinks.forEach(link => {
     link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + currentSection) {
+    if (currentSection && link.getAttribute("href") === "#" + currentSection) {
       link.classList.add("active");
     }
   });
 
-  // If no section is active, highlight Home by default
+  // Default: highlight Home
   if (window.scrollY < 200 || currentSection === "") {
     navLinks.forEach(link => link.classList.remove("active"));
-    document.querySelector('nav ul li a[href="#"]').classList.add("active");
+    const homeLink = document.querySelector('nav ul li a[href="#"]');
+    if (homeLink) homeLink.classList.add("active");
   }
 }
 
-// Call once when page loads
+// Call once and on scroll (throttled)
 highlightActiveLink();
 
-// Call on scroll with throttle for better performance
 let scrollTimeout;
 window.addEventListener("scroll", () => {
   if (!scrollTimeout) {
@@ -112,12 +117,14 @@ const observerOptions = {
   rootMargin: '0px 0px -100px 0px'
 };
 
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const progressBars = entry.target.querySelectorAll('.progress-bar');
       progressBars.forEach(bar => {
-      bar.style.animationPlayState = 'running';
+        // Read CSS var --progress-width
+        const targetWidth = bar.style.getPropertyValue('--progress-width') || '0%';
+        bar.style.width = targetWidth;
       });
     }
   });
@@ -127,7 +134,6 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.skill-card').forEach(card => {
   observer.observe(card);
 });
-
 
 // Portfolio filter
 const filterBtns = document.querySelectorAll('.filter-btn');
@@ -142,38 +148,40 @@ filterBtns.forEach(btn => {
     });
     btn.classList.remove('filter-inactive');
     btn.classList.add('filter-active');
-    
+
     // Filter projects
     const filter = btn.getAttribute('data-filter');
-    
+
     projectCards.forEach(card => {
       if (filter === 'all' || card.getAttribute('data-category') === filter) {
         card.style.display = 'block';
         setTimeout(() => {
           card.style.opacity = '1';
           card.style.transform = 'scale(1)';
-        }, 100);
+        }, 50);
       } else {
         card.style.opacity = '0';
         card.style.transform = 'scale(0.8)';
         setTimeout(() => {
           card.style.display = 'none';
-        }, 300);
+        }, 200);
       }
     });
   });
 });
 
-  // Expand image modal functionality
-  const modal = document.getElementById("imageModal");
-  const modalImg = document.getElementById("expandedImg");
-  const closeBtn = document.querySelector(".close");
+// Expand image modal functionality
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("expandedImg");
+const closeBtn = document.querySelector(".close");
 
+if (modal && modalImg && closeBtn) {
   document.querySelectorAll(".expand-btn").forEach(btn => {
     btn.addEventListener("click", () => {
-      const imgSrc = btn.closest(".project-card").querySelector(".project-img").src;
-      modal.style.display = "block";
-      modalImg.src = imgSrc;
+      const img = btn.closest(".project-card")?.querySelector(".project-img");
+      if (!img) return;
+      modal.style.display = "flex";
+      modalImg.src = img.src;
     });
   });
 
@@ -181,6 +189,7 @@ filterBtns.forEach(btn => {
     modal.style.display = "none";
   };
 
-  window.onclick = (e) => {
+  window.addEventListener("click", (e) => {
     if (e.target === modal) modal.style.display = "none";
-  };
+  });
+}
