@@ -56,7 +56,6 @@
       transition: color 0.2s ease, transform 0.2s ease;
     }
     nav ul li a:hover {
-      color: #f97316;
       transform: translateY(-1px);
     }
 
