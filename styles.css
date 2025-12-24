@@ -4,21 +4,10 @@
         radial-gradient(circle at top left, rgba(56,189,248,0.18), transparent 55%),
         radial-gradient(circle at bottom right, rgba(249,115,22,0.18), transparent 55%),
         #020617;
-      color: #e5e7eb;
+      color: #e5e7eb;  
     }
+    
 
-    /* Override light backgrounds to dark variants */
-    .bg-white,
-    .bg-gray-100,
-    .bg-blue-50 {
-      background-color: rgba(15,23,42,0.95) !important;
-    }
-
-    .text-gray-800 { color: #e5e7eb !important; }
-    .text-gray-700 { color: #e5e7eb !important; }
-    .text-gray-600 { color: #9ca3af !important; }
-    .text-gray-500 { color: #9ca3af !important; }
-    .text-gray-400 { color: #6b7280 !important; }
 
     /* Main nav container */
     nav {
